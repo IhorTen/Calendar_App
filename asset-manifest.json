@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Calendar_App/static/css/main.7f9f789f.chunk.css",
+    "main.js": "/Calendar_App/static/js/main.6b177535.chunk.js",
+    "main.js.map": "/Calendar_App/static/js/main.6b177535.chunk.js.map",
+    "runtime~main.js": "/Calendar_App/static/js/runtime~main.beeaa804.js",
+    "runtime~main.js.map": "/Calendar_App/static/js/runtime~main.beeaa804.js.map",
+    "static/js/2.32ce8013.chunk.js": "/Calendar_App/static/js/2.32ce8013.chunk.js",
+    "static/js/2.32ce8013.chunk.js.map": "/Calendar_App/static/js/2.32ce8013.chunk.js.map",
+    "index.html": "/Calendar_App/index.html",
+    "precache-manifest.8a48adb78c4afee5919623663d4a20b6.js": "/Calendar_App/precache-manifest.8a48adb78c4afee5919623663d4a20b6.js",
+    "service-worker.js": "/Calendar_App/service-worker.js",
+    "static/css/main.7f9f789f.chunk.css.map": "/Calendar_App/static/css/main.7f9f789f.chunk.css.map"
+  }
+}
