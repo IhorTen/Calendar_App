@@ -1,0 +1,8 @@
+.days {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #494949;
+    font-size: 11px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}

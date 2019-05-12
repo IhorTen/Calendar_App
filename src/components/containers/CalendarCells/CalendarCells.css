@@ -1,0 +1,65 @@
+.body .cell {
+    position: relative;
+    height: 5em;
+    border-right: 1px solid #eee;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.25s ease-out;
+}
+
+.body .cell:hover {
+    background: #f5ffdb;
+    border-right: 20px solid rgba(169, 107, 238, 0.65);
+    transition: 0.5s ease-out;
+}
+
+/*.body .selected {*/
+    /*border-right: 20px solid rgba(169, 107, 238, 0.65);*/
+/*}*/
+
+.body .today {
+    background: rgba(114, 187, 255, 0.4);
+}
+
+.body .row {
+    border-bottom: 1px solid #eee;
+}
+
+.body .cell .number {
+    position: absolute;
+    font-size: 82.5%;
+    line-height: 1;
+    top: .75em;
+    right: .75em;
+    font-weight: 700;
+}
+
+.body .disabled {
+    color: #ccc;
+    pointer-events: none;
+}
+
+.body .cell .bg {
+    font-weight: 700;
+    line-height: 1;
+    color: #1a8fff;
+    opacity: 0;
+    font-size: 8em;
+    position: absolute;
+    top: -.2em;
+    right: -.05em;
+    transition: .25s ease-out;
+    letter-spacing: -.07em;
+}
+
+.body .cell:hover .bg, .calendar .body .selected .bg  {
+    opacity: 0.5;
+    transition: .5s ease-in;
+}
+
+.body .col {
+    flex-grow: 0;
+    flex-basis: calc(100%/7);
+    width: calc(100%/7);
+}
