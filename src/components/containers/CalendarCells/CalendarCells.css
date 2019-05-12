@@ -14,13 +14,21 @@
     transition: 0.5s ease-out;
 }
 
-/*.body .selected {*/
-    /*border-right: 20px solid rgba(169, 107, 238, 0.65);*/
-/*}*/
-
 .body .today {
     background: rgba(114, 187, 255, 0.4);
 }
+
+.body .events{
+    width: 100%;
+    height: 100%;
+    background: rgba(248, 249, 117, 0.61);
+    font-style: italic;
+    overflow-y: auto;
+}
+.body .bold {
+    font-weight: bold;
+}
+
 
 .body .row {
     border-bottom: 1px solid #eee;
@@ -31,7 +39,7 @@
     font-size: 82.5%;
     line-height: 1;
     top: .75em;
-    right: .75em;
+    right: 1.3em;
     font-weight: 700;
 }
 

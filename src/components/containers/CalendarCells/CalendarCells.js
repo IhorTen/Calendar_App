@@ -14,48 +14,49 @@ const CalendarCells = props => {
     const dateFormat = 'D';
     const rows = [];
 
-
     let days = [];
     let day = startDate;
     let formattedDate = '';
 
     while (day <= endDate) {
         for (let i = 0; i < 7; i++) {
-            formattedDate = dateFns.format(day, dateFormat);
-            const cls = !dateFns.isSameMonth(day, monthStart)? 'disabled': dateFns.isSameDay(day, selectedDate)? 'selected' : '' ;
-            const cls_today = dateFns.isToday(day) ? 'today' : '';
-            const date = dateFns.format(day, 'DD MMMM YYYY') ;
-            // const cloneDay = day;
+                formattedDate = dateFns.format(day, dateFormat);
+                const cls = !dateFns.isSameMonth(day, monthStart)? 'disabled': dateFns.isSameDay(day, selectedDate)? 'selected' : '' ;
+                const cls_today = dateFns.isToday(day) ? 'today' : '';
+                const date = dateFns.format(day, 'DD MMMM YYYY') ;
 
-            days.push(
-                <Popup
-                    trigger={
-                        <div className={`col cell ${cls} ${cls_today}`} key={day}>
-                            <span className='number'> {formattedDate} </span>
-                        </div>}
-                    position={'bottom center'}
-                    closeOnDocumentClick
-                    contentStyle={{
-                        width: '300px'
-                    }}
-                    key={day}
-                >
-                    <PopupForm
-                    date={date}
-                    readOnly={true}
-                    value={props.value}
-                    changeValue={(event) => props.changeValue(event)}
-                    changeEvent={(event) => props.changeEvent(event)}
-                    changePersons={(event) => props.changePersons(event)}
-                    add={() => props.add(day, date)}
-                    event={props.event}
-                    persons={props.persons}
-                />
-                </Popup>
+                days.push(
+                    <Popup
+                        trigger={
+                            <div className={`col cell ${cls} ${cls_today}`} key={day}>
+                                <span className='number'> {formattedDate} </span>
+                                {props.renderEvents(date, props.events)}
+                            </div>}
+                        position={'bottom center'}
+                        closeOnDocumentClick
+                        contentStyle={{
+                            width: '300px'
+                        }}
+                        key={day}
+                    >
+                        <PopupForm
+                            date={date}
+                            readOnly={true}
+                            changeValue={(event) => props.changeValue(event)}
+                            changeEvent={(event) => props.changeEvent(event)}
+                            changePersons={(event) => props.changePersons(event)}
+                            getEventValues={() => props.getEventValues(day, date)}
+                            event={props.event}
+                            persons={props.persons}
+                            description={props.description}
+                            events={props.events}
+                        />
+                    </Popup>
+                );
 
-            );
-            day = dateFns.addDays(day, 1)
+                day = dateFns.addDays(day, 1)
         }
+
         rows.push(
             <div className='row' key={day}>
                 {days}

@@ -63,7 +63,7 @@ div .header {
     border: none;
 }
 
-.btn:hover {
+.add_event:hover {
     background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
 }
 
@@ -81,6 +81,7 @@ div .header {
 
 .update {
     margin-left: 5px;
+    cursor: not-allowed;
 }
 
 .search {

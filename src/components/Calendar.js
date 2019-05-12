@@ -4,6 +4,7 @@ import './Calendar.css'
 import Header from "./containers/Header/Header";
 import WeekDays from './containers/WeekDays/WeekDays';
 import CalendarCells from './containers/CalendarCells/CalendarCells';
+import eventList from '../eventList'
 
 class Calendar extends Component{
 
@@ -11,9 +12,9 @@ class Calendar extends Component{
         currentMonth: new Date(),
         currentDay: new Date(),
         selectedDate: new Date(),
-        value: '',
-        event: '',
-        persons: ''
+        event: "",
+        persons: "",
+        description: "",
     };
 
 
@@ -26,7 +27,7 @@ class Calendar extends Component{
 
     changeValue = event => {
         this.setState({
-            value: event.target.value,
+            description: event.target.value,
 
         });
     };
@@ -43,15 +44,42 @@ class Calendar extends Component{
       })
     };
 
-    getDescriptionValue = (day, date) => {
+    getEventValues = (day, date) => {
         this.setState({
             selectedDate: day
         });
-        console.log(this.state.event, this.state.value);
+
+        eventList.events.push({
+            "event": this.state.event,
+            "date": date,
+            "persons": this.state.persons,
+            "description": this.state.description
+        });
+
         alert('Event: ' + this.state.event + ', with: ' + this.state.persons + ', added on: ' + date );
         this.setState({
-            value: ''
+            value: "",
+            event: "",
+            persons: "",
+            description: ""
         })
+    };
+    
+    renderEvents = (date, arr) => {
+        for (let i = 0; i < arr.length; i++){
+            if (date === arr[i].date) {
+                return <div
+                    className='events'
+                >
+                    <br/>
+                    Event: <span className='bold'> {arr[i].event} </span>
+                    <br/>
+                    Persons: <span className='bold'>{arr[i].persons}</span>
+                    <br/>
+                    <span> {arr[i].description} </span>
+                </div>
+            }
+        }
     };
 
     render() {
@@ -71,10 +99,12 @@ class Calendar extends Component{
                     changeValue={this.changeValue}
                     changeEvent={this.changeEvent}
                     changePersons={this.changePersons}
-                    add={this.getDescriptionValue}
-                    value={this.state.value}
+                    getEventValues={this.getEventValues}
                     event={this.state.event}
                     persons={this.state.persons}
+                    description={this.state.description}
+                    events={eventList.events}
+                    renderEvents={this.renderEvents}
                 />
             </div>
         );

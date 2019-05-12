@@ -1,6 +1,5 @@
 .popupForm {
     padding: 10px 15px 10px 5px;
-    /*margin: 0 auto;*/
     width: 300px;
 }
 
@@ -14,6 +13,7 @@
 .popup_btn {
     float: left;
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .popup_description {
@@ -26,13 +26,22 @@
 }
 
 .btn_add, .btn_delete {
-    background: rgba(66, 184, 221, 0.33);
-    border: 1px solid #000000;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
+    background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:14px;
+    padding:4px 12px;
+    text-decoration:none;
+    border: none;
 }
 
-.btn_add,
-.btn_delete:hover {
+.btn_add:hover {
     cursor: pointer;
+    background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+}
+
+.btn_delete:hover{
+    background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
 }

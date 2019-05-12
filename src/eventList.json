@@ -1,0 +1,56 @@
+{
+  "events" : [
+    {
+      "event": "Victory Day",
+      "date": "09 May 2019",
+      "persons": "",
+      "description": "Some description"
+    },
+    {
+      "event": "Mother Day",
+      "date": "12 May 2019",
+      "persons": "Mother",
+      "description": ""
+    },
+    {
+      "event": "Birthday",
+      "date": "24 May 2019",
+      "persons": "Father",
+      "description": ""
+    },
+    {
+      "event": "My Birthday",
+      "date": "20 June 2019",
+      "persons": "Me",
+      "description": ""
+    },
+    {
+      "event": "Constitution day",
+      "date": "28 June 2019",
+      "persons": "",
+      "description": "Some description"
+    },
+    {
+      "event": "Easter",
+      "date": "28 April 2019",
+      "persons": "All",
+      "description": "Some description"
+    },
+    {
+      "event": "Atlas Weekend",
+      "date": "09 July 2019",
+      "persons": "My friends",
+      "description": "Some description"
+    },
+    {
+      "event": "Picnic",
+      "date": "08 June 2019",
+      "persons": "Friends",
+      "description": "Don`t forget"
+    }
+  ]
+}
+
+
+
+

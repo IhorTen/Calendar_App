@@ -10,6 +10,7 @@ const Header = props => {
     return (
         <div className='header row'>
             <div className='col col-start'>
+                <span>Today is: </span>
                 <b>{dateFns.format(props.currentDay, 'dddd, MMMM D, YYYY')}</b>
             </div>
             <div className='col col-center'>
@@ -17,8 +18,8 @@ const Header = props => {
                     chevron_left
                 </div>
                 <span>
-                        {dateFns.format(props.currentMonth, dateFormat)}
-                    </span>
+                    {dateFns.format(props.currentMonth, dateFormat)}
+                </span>
                 <div className='icon' onClick={() => props.changeMonth(true)}>
                     chevron_right
                 </div>
@@ -33,9 +34,9 @@ const Header = props => {
                         textAlign: 'center'
                     }}
                     key={Math.random()}
-                    children={'To make event click the date on the calendar'}
+                    children={'To add event, click the date on the calendar'}
                 />
-                <button className='btn update' title='Choose date'> Update</button>
+                <button className='btn update' title='Sorry it don`t works'> Update</button>
                 <div style={{display: 'inline-block'}}>
                     <span className='icon' style={{marginLeft: '20px'}}> search </span>
                     <input className='search' type="text" placeholder='Event, date of person'/>
