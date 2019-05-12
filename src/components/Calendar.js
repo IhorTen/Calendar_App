@@ -56,7 +56,7 @@ class Calendar extends Component{
             "description": this.state.description
         });
 
-        alert('Event: ' + this.state.event + ', with: ' + this.state.persons + ', added on: ' + date );
+        // alert('Event: ' + this.state.event + ', with: ' + this.state.persons + ', added on: ' + date );
         this.setState({
             value: "",
             event: "",
